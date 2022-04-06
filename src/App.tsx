@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      hi!
+      <h2>Hi!</h2>
+      <h3>This is TypeScript React shopping cart</h3>
     </div>
   );
 }
