@@ -1,12 +1,12 @@
 import Product from "./components/product/Product";
 
 import "./App.css";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <div className="App">
-      <h2>Hi!</h2>
-      <h3>This is TypeScript React shopping cart</h3>
+      <Header />
       <Product />
     </div>
   );
