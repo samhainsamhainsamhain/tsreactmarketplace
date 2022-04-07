@@ -1,3 +1,5 @@
+import Product from "./components/product/Product";
+
 import "./App.css";
 
 function App() {
@@ -5,6 +7,7 @@ function App() {
     <div className="App">
       <h2>Hi!</h2>
       <h3>This is TypeScript React shopping cart</h3>
+      <Product />
     </div>
   );
 }
