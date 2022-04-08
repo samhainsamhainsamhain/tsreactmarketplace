@@ -13,11 +13,11 @@ function App() {
     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
   };
 
-  const itemsInCart = 11
+  const itemsInCart = 11;
 
   return (
     <div className="App">
-      <Header itemsQuantity={itemsInCart}/>
+      <Header itemsQuantity={itemsInCart} />
       <ProductItem
         id={dummyProduct.id}
         title={dummyProduct.title}

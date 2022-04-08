@@ -3,11 +3,10 @@ import shopIcon from "../../assets/shop-icon.png";
 import cartIcon from "../../assets/cart-icon.svg";
 
 interface Cart {
-  itemsQuantity: number
+  itemsQuantity: number;
 }
 
 export default function Header(props: Cart) {
-
   return (
     <header className={classes.header}>
       <img src={shopIcon} alt="shop icon" />
