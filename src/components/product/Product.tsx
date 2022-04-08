@@ -1,26 +1,26 @@
 import React from "react";
 
+import { Product } from "../../shopinterface/productTypes";
 import Card from "../UI/Card";
 
 import classes from "./Product.module.css";
 
-export default function Product() {
+interface ProductProps extends Product {}
+
+export default function ProductItem(props: ProductProps) {
   return (
     <Card>
-      <div className={classes.container}>
+      <div className={classes.product}>
         <img
           className={classes.image}
-          src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+          src={props.image}
           alt="image of product"
         />
         <div className={classes.productInfo}>
-          <span className={classes.title}>Product name</span>
-          <span className={classes.price}>$13.99</span>
+          <span className={classes.title}>{props.title}</span>
+          <span className={classes.price}>{props.price}</span>
         </div>
-        <p className={classes.description}>
-          Your perfect pack for everyday use and walks in the forest. Stash your
-          laptop (up to 15 inches) in the padded sleeve, your everyday
-        </p>
+        <p className={classes.description}>{props.description}</p>
         <div className={classes.control}>
           <button>-</button>
           <span>11</span>
