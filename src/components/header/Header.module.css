@@ -13,7 +13,7 @@
 }
 
 .header h1 {
-    padding-right: 10px;
+  padding-right: 10px;
   font-weight: 500;
   font-size: 30px;
 }
@@ -34,21 +34,21 @@
 }
 
 .cart img {
-    position: relative;
+  position: relative;
   left: 15px;
   width: 30px;
   height: 30px;
 }
 
 .badge {
-    position: relative;
-    display: inline-block;
-    right: 5px;
-    bottom: 15px;
-    background-color: rgba(0, 68, 255, 0.4);
-    border-radius: 100%;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    flex-shrink: 0;
+  position: relative;
+  display: inline-block;
+  right: 5px;
+  bottom: 15px;
+  background-color: rgba(0, 68, 255, 0.4);
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  flex-shrink: 0;
 }
