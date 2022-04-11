@@ -13,11 +13,9 @@ function App() {
     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
   };
 
-  const itemsInCart = 11;
-
   return (
     <div className="App">
-      <Header itemsQuantity={itemsInCart} />
+      <Header cart={11} />
       <ProductItem
         id={dummyProduct.id}
         title={dummyProduct.title}
