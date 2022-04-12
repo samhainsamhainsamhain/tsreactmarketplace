@@ -1,5 +1,5 @@
 import Header from "./components/header/Header";
-import ProductItem from "./components/product/Product";
+import Products from "./components/products/Products"
 
 import "./App.css";
 
@@ -16,13 +16,7 @@ function App() {
   return (
     <div className="App">
       <Header cart={11} />
-      <ProductItem
-        id={dummyProduct.id}
-        title={dummyProduct.title}
-        price={dummyProduct.price}
-        description={dummyProduct.description}
-        image={dummyProduct.image}
-      />
+      <Products />
     </div>
   );
 }
