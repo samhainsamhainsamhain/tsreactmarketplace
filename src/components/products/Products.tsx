@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { idText } from "typescript";
-
-import DUMMY_DATA from "../../dummyProducts.json";
-import { Products, Product } from "../../shopinterface/productTypes";
+import { Products } from "../../shopinterface/productTypes";
 import ProductItem from "../product/Product";
 
-import classes from './Products.module.css'
+import classes from "./Products.module.css";
 
-export default function ProductsList() {
-  const [products, setProducts] = useState<Products>([]);
-  useEffect(() => {
-    setProducts(DUMMY_DATA);
-  }, []);
+interface ProductsListProps {
+  products: Products;
+}
+
+export default function ProductsList(props: ProductsListProps) {
   return (
     <div className={classes.productsList}>
-      {products.map((item) => {
+      {props.products.map((item) => {
         return (
           <ProductItem
             id={item.id}
