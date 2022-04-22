@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Product } from "../../shopinterface/productTypes";
-import Card from "../UI/Card";
+import Card from "../UI/Card/Card";
 
 import classes from "./Product.module.css";
 
