@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import Header from "./components/header/Header";
 import ProductsList from "./components/products/Products"
-import { Products, Product } from "./shopinterface/productTypes";
+import { Products } from "./shopinterface/productTypes";
 import DUMMY_DATA from "./dummyProducts.json";
 
 import "./App.css";

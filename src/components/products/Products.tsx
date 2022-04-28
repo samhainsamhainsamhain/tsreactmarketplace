@@ -13,6 +13,7 @@ export default function ProductsList(props: ProductsListProps) {
       {props.products.map((item) => {
         return (
           <ProductItem
+            key={Math.random()}
             id={item.id}
             title={item.title}
             price={item.price}

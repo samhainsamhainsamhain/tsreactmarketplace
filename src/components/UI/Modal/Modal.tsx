@@ -10,7 +10,7 @@ export interface ModalProps {
 
 export default function Modal(props: ModalProps) {
   const modal = (
-    <>
+    <div className={classes.overlay}>
       <div className={classes.backdrop} onClick={props.hide} />
       <div className={classes.wrapper}>
         <div className={classes.modal}>
@@ -23,7 +23,7 @@ export default function Modal(props: ModalProps) {
           <div className={classes.modalContent}>{props.modalContent}</div>
         </div>
       </div>
-    </>
+    </div>
   );
 
   return props.isShown ? ReactDOM.createPortal(modal, document.body) : null;
