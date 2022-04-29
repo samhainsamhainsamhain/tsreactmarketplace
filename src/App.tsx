@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import Header from "./components/header/Header";
-import ProductsList from "./components/products/Products"
-import { Products, Product } from "./shopinterface/productTypes";
+import ProductsList from "./components/products/Products";
+import { Products } from "./shopinterface/productTypes";
 import DUMMY_DATA from "./dummyProducts.json";
 
 import "./App.css";
+import { CartProvider } from "./store/СartProvider";
 
 function App() {
   const [products, setProducts] = useState<Products>([]);
@@ -14,10 +15,12 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Header cart={11} />
-      <ProductsList products={products} />
-    </div>
+    <CartProvider>
+      <div className="App">
+        <Header />
+        <ProductsList products={products} />
+      </div>
+    </CartProvider>
   );
 }
 

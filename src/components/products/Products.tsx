@@ -18,6 +18,7 @@ export default function ProductsList(props: ProductsListProps) {
             price={item.price}
             description={item.description}
             image={item.image}
+            amount={1}
           />
         );
       })}
