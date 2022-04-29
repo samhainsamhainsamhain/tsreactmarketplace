@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import { useContext, useState } from "react";
 
 import { Product } from "../../shopinterface/productTypes";
 import Card from "../UI/Card/Card";
+import { CartContext } from "../../store/СartProvider";
 
 import classes from "./Product.module.css";
 
-interface ProductProps extends Product {}
+interface ProductProps extends Product {
+  amount: number
+}
 
 export default function ProductItem(props: ProductProps) {
   const [productQuantity, setProductQuantity] = useState(0);
+  const cartCtx = useContext(CartContext)
 
   function addToCart() {
-    setProductQuantity(productQuantity + 1);
+    setProductQuantity(productQuantity + 1)
+    cartCtx.addToCartHandler(props)
   }
 
   function removeFromCart() {
-    setProductQuantity(productQuantity - 1);
+    setProductQuantity(productQuantity - 1)
+    cartCtx.removeFromCartHandler(props.id)
   }
 
   return (
@@ -34,7 +40,7 @@ export default function ProductItem(props: ProductProps) {
         </div>
         <p className={classes.description}>{props.description}</p>
         <div className={classes.control}>
-          <button onClick={removeFromCart}>-</button>
+          <button onClick={removeFromCart} disabled={productQuantity < 1}>-</button>
           <span>{productQuantity}</span>
           <button onClick={addToCart}>+</button>
         </div>
